@@ -6,7 +6,10 @@ import { IoMdDoneAll } from "react-icons/io";
 import { v4 } from "uuid";
 import extenso from "extenso";
 
-const data = typeof window !== 'undefined' ? JSON.parse(localStorage.getItem("@tasks")) : [];
+const data =
+  typeof window !== "undefined"
+    ? JSON.parse(localStorage.getItem("@tasks"))
+    : [];
 
 export function CardLayout() {
   const [taskInput, setTaskinput] = useState("");
@@ -38,7 +41,7 @@ export function CardLayout() {
   };
 
   useEffect(() => {
-    if (typeof window !== 'undefined') {
+    if (typeof window !== "undefined") {
       localStorage.setItem("@tasks", JSON.stringify(todos));
     }
   }, [todos]);
