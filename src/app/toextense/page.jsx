@@ -9,9 +9,9 @@ export default function ToExtense() {
       <div className="relative w-full h-80">
         <Image src={Bg} alt="bgimage" fill className="object-cover" />
       </div>
-      <main className="px-20 py-12 max-xl:px-5">
+      <div className="px-20 py-12 max-xl:px-5">
         <CardLayout />
-      </main>
+      </div>
     </div>
   );
 }
