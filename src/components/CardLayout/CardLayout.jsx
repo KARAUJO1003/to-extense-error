@@ -6,8 +6,6 @@ import { IoMdDoneAll } from "react-icons/io";
 import { v4 } from "uuid";
 import extenso from "extenso";
 
-const data = JSON.parse(localStorage.getItem("@tasks"));
-
 export function CardLayout() {
   const [taskInput, setTaskinput] = useState("");
   const [todos, setTodos] = useState([...data]);
@@ -37,9 +35,6 @@ export function CardLayout() {
     setTodos((prevTodos) => prevTodos.filter((item) => item.uuid !== uuid));
   };
 
-  useEffect(() => {
-    localStorage.setItem("@tasks", JSON.stringify(todos));
-  }, [todos]);
 
   const [inputExtense, setInputExtense] = useState(0);
   const [mode, setMode] = useState("number");
